@@ -11,7 +11,8 @@
     <a href="index.html" class="brand">
       <img src="images/coredriller.svg" alt="Kuberg Core Drilling logo" class="logo" />
     </a>
-    <nav class="site-nav" aria-label="Main navigation">
+
+    <nav class="site-nav" id="nav-menu">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="services.html">Services</a></li>
@@ -19,43 +20,64 @@
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
+
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
   </header>
 
   <main>
     <section class="hero">
-      <h1>Request a Quote</h1>
-      <p>Fill out the form below or reach us directly — we’ll get back within 24 hours.</p>
+      <h1>Get in Touch</h1>
+      <p>Whether you need an estimate or have a technical question — we’re here to help.</p>
     </section>
 
     <section class="about">
-      <form action="#" method="post">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" required />
+      <form action="https://formsubmit.co/info@precisioncore.com" method="POST">
+        <input type="hidden" name="_subject" value="New Website Message">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
 
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required />
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Your full name" required>
 
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Your email address" required>
 
-        <button type="submit">Send</button>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="6" placeholder="Tell us about your project..." required></textarea>
+
+        <button type="submit">Send Message</button>
       </form>
-
-      <h3>Other Ways to Reach Us</h3>
-      <p>Email: <a href="mailto:info@kubergcore.com">info@kubergcore.com</a></p>
-      <p>Phone: (423) 635-9052</p>
-      <p>Address: 1220 Riverside Drive, Chattanooga, TN 37406</p>
-      <p>Mon–Fri: 7 AM – 5 PM</p>
     </section>
 
     <section class="callout">
-      <h2>We Drill With Precision</h2>
-      <p>Fully licensed and insured. Safety and accuracy on every site.</p>
+      <p>You can also reach us directly at <strong>(423) 635-9052</strong> or email <strong>info@precisioncore.com</strong>.</p>
     </section>
   </main>
 
   <footer>
     <p>&copy; 2025 Kuberg Core Drilling &nbsp;|&nbsp; Licensed & Insured &nbsp;|&nbsp; Chattanooga, TN</p>
   </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+    const navLinks = document.querySelectorAll('.site-nav a');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navMenu.classList.toggle('active');
+    });
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+      });
+    });
+  </script>
 </body>
 </html>

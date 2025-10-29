@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kuberg Core Drilling | Precision Concrete Cutting</title>
+  <title>Kuberg Core Drilling</title>
   <link rel="stylesheet" href="css/styles.css" />
-  <meta name="description" content="Professional concrete core drilling, wall sawing, and slab cutting services across Tennessee and the Southeast. Reliable, accurate, and safety-focused." />
 </head>
 <body>
   <header class="header">
     <a href="index.html" class="brand">
       <img src="images/coredriller.svg" alt="Kuberg Core Drilling logo" class="logo" />
     </a>
-    <nav class="site-nav" aria-label="Main navigation">
+
+    <nav class="site-nav" id="nav-menu">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="services.html">Services</a></li>
@@ -20,71 +20,73 @@
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
+
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
   </header>
 
   <main>
-    <!-- Hero Section -->
     <section class="hero">
       <h1>Clean, Accurate Concrete Drilling</h1>
-      <p>
-        Kuberg Core Drilling provides precision core drilling, wall sawing, and slab cutting for
-        commercial, industrial, and residential projects across the Southeast.
-      </p>
+      <p>Professional core drilling, wall sawing, and slab cutting — built on precision and reliability.</p>
       <a href="contact.html" class="cta-btn">Request a Quote</a>
     </section>
 
-    <!-- About Section -->
-    <section class="about">
-      <h2>Experience You Can Depend On</h2>
-      <p>
-        With over a decade of field experience, Kuberg Core Drilling is trusted by builders,
-        contractors, and engineers throughout Tennessee. We’re licensed, insured, and OSHA-certified
-        — committed to delivering clean, accurate results with minimal disruption to your job site.
-      </p>
-    </section>
-
-    <!-- Highlight Section -->
     <section class="highlight">
-      <img src="images/close-up-construction-worker-construction-site.jpg" alt="Kuberg Core Drilling crew at work" />
+      <img src="images/close-up-construction-worker-construction-site.jpg" alt="Core drilling at construction site" />
       <div>
-        <h3>Reliable. Efficient. Precise.</h3>
-        <p>
-          From small residential installations to large-scale commercial projects, we use
-          professional-grade diamond drilling systems to ensure every cut meets your specifications.
-        </p>
-        <a href="projects.html" class="cta-link">View Our Projects →</a>
+        <h3>Industrial Strength. Local Trust.</h3>
+        <p>Our crews deliver fast, clean results across commercial, industrial, and residential projects — safely and efficiently.</p>
+        <a href="projects.html" class="cta-link">View Our Work →</a>
       </div>
     </section>
 
-    <!-- Quick Services Overview -->
     <section class="quick-services">
-      <h2>Our Services</h2>
       <div class="service-grid">
         <div>
           <h3>Core Drilling</h3>
-          <p>2”–24” diameter drilling for plumbing, HVAC, and electrical applications.</p>
+          <p>Drilling holes from 2” to 24” for plumbing, HVAC, and electrical systems.</p>
         </div>
         <div>
           <h3>Slab Sawing</h3>
-          <p>Clean, controlled floor cutting for trenches, joints, and openings.</p>
+          <p>Precise cutting for floor openings, trenches, or control joints using high-powered saws.</p>
         </div>
         <div>
           <h3>Wall Sawing</h3>
-          <p>Doorway and window openings cut through reinforced concrete with precision.</p>
+          <p>Ideal for doorways, windows, or reinforced openings in concrete or block walls.</p>
         </div>
       </div>
     </section>
 
-    <!-- Contact Callout -->
     <section class="callout">
-      <h2>Need a Quote?</h2>
-      <p>We’ll respond within 24 hours to schedule your free on-site estimate.</p>
-      <a href="contact.html" class="cta-btn">Get in Touch</a>
+      <p>Ready to get started? Let’s talk about your project today.</p>
+      <a href="contact.html" class="cta-btn">Contact Us</a>
     </section>
   </main>
 
   <footer>
     <p>&copy; 2025 Kuberg Core Drilling &nbsp;|&nbsp; Licensed & Insured &nbsp;|&nbsp; Chattanooga, TN</p>
   </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+    const navLinks = document.querySelectorAll('.site-nav a');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navMenu.classList.toggle('active');
+    });
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+      });
+    });
+  </script>
 </body>
 </html>

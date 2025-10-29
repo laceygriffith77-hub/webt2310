@@ -11,7 +11,8 @@
     <a href="index.html" class="brand">
       <img src="images/coredriller.svg" alt="Kuberg Core Drilling logo" class="logo" />
     </a>
-    <nav class="site-nav" aria-label="Main navigation">
+
+    <nav class="site-nav" id="nav-menu">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="services.html">Services</a></li>
@@ -19,40 +20,63 @@
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
+
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
   </header>
 
   <main>
     <section class="hero">
-      <h1>Our Services</h1>
-      <p>Precision cutting solutions for every type of concrete project — large or small.</p>
+      <h1>What We Do</h1>
+      <p>Precision cutting and drilling tailored to your project needs — delivered safely, cleanly, and on schedule.</p>
     </section>
 
     <section class="quick-services">
       <div class="service-grid">
         <div>
           <h3>Core Drilling</h3>
-          <p>Holes from 2” to 24” in diameter through concrete, brick, or masonry. Ideal for mechanical, plumbing, or HVAC systems.</p>
+          <p>We drill precise holes from 2” to 24” through concrete, brick, and masonry for plumbing, HVAC, and electrical systems.</p>
         </div>
         <div>
           <h3>Slab Sawing</h3>
-          <p>Clean floor and pavement cuts for trenches, joints, and new installations. Controlled depth for smooth finishes.</p>
+          <p>Floor and pavement sawing for trenching, expansion joints, and controlled removals with minimal dust.</p>
         </div>
         <div>
           <h3>Wall Sawing</h3>
-          <p>Precision openings in reinforced concrete for doors, windows, and access points using track-mounted saws.</p>
+          <p>Cutting clean openings for doors, windows, and ventilation in reinforced concrete or block walls.</p>
         </div>
       </div>
     </section>
 
     <section class="callout">
-      <h2>Need a Specialized Cut?</h2>
-      <p>We handle complex and high-tolerance projects safely and efficiently.</p>
-      <a href="contact.html" class="cta-btn">Request a Quote</a>
+      <p>Contact us today to discuss your project’s requirements.</p>
+      <a href="contact.html" class="cta-btn">Get a Quote</a>
     </section>
   </main>
 
   <footer>
     <p>&copy; 2025 Kuberg Core Drilling &nbsp;|&nbsp; Licensed & Insured &nbsp;|&nbsp; Chattanooga, TN</p>
   </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+    const navLinks = document.querySelectorAll('.site-nav a');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navMenu.classList.toggle('active');
+    });
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+      });
+    });
+  </script>
 </body>
 </html>

@@ -11,7 +11,8 @@
     <a href="index.html" class="brand">
       <img src="images/coredriller.svg" alt="Kuberg Core Drilling logo" class="logo" />
     </a>
-    <nav class="site-nav" aria-label="Main navigation">
+
+    <nav class="site-nav" id="nav-menu">
       <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="services.html">Services</a></li>
@@ -19,43 +20,44 @@
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
+
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
   </header>
 
   <main>
-    <!-- HERO SECTION -->
     <section class="hero">
       <h1>Our Work</h1>
-      <p>Precision core drilling, wall sawing, and slab cutting — trusted by contractors across the Southeast.</p>
+      <p>From high-rise renovations to heavy industrial retrofits — see how we bring precision to every cut.</p>
       <a href="contact.html" class="cta-btn">Request a Quote</a>
     </section>
 
-    <!-- PROJECT GRID -->
-    <section id="projects-grid" class="quick-services">
-      <h2>Recent Projects</h2>
+    <section class="quick-services">
       <div class="service-grid">
         <div>
           <h3>Commercial</h3>
-          <p>Clean and precise drilling for business parks, office retrofits, and high-rise builds.</p>
+          <p>Clean drilling for business parks, office builds, and utility retrofits.</p>
           <ul>
             <li>Downtown Office Retrofit</li>
             <li>Business Park Expansion</li>
             <li>City Parking Garage Project</li>
           </ul>
         </div>
-
         <div>
           <h3>Industrial</h3>
-          <p>Heavy-duty cutting for plants, factories, and distribution centers.</p>
+          <p>Heavy-duty cutting and coring for plants, factories, and distribution centers.</p>
           <ul>
             <li>Plant Expansion – Machinery Pads</li>
             <li>Distribution Center Saw Cutting</li>
             <li>Factory Floor Drain Installations</li>
           </ul>
         </div>
-
         <div>
           <h3>Residential</h3>
-          <p>Quiet, controlled core drilling for homes, condos, and apartment developments.</p>
+          <p>Quiet, controlled drilling for homes, condos, and apartment complexes.</p>
           <ul>
             <li>Riverside Condominiums</li>
             <li>Maplewood Apartments</li>
@@ -65,10 +67,8 @@
       </div>
     </section>
 
-    <!-- CALLOUT SECTION -->
     <section class="callout">
-      <h2>Have a Job in Mind?</h2>
-      <p>Contact our team for fast, accurate estimates and professional service on every project.</p>
+      <p>Need similar results? We’re ready to take on your project.</p>
       <a href="contact.html" class="cta-btn">Contact Us</a>
     </section>
   </main>
@@ -76,5 +76,23 @@
   <footer>
     <p>&copy; 2025 Kuberg Core Drilling &nbsp;|&nbsp; Licensed & Insured &nbsp;|&nbsp; Chattanooga, TN</p>
   </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+    const navLinks = document.querySelectorAll('.site-nav a');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navMenu.classList.toggle('active');
+    });
+
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+      });
+    });
+  </script>
 </body>
 </html>
