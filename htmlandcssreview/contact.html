@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact | Precision Core Drilling</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | Kuberg Core Drilling</title>
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
   <header class="header">
-        <a href="index.html" class="brand"><img src="images/coredriller.svg" alt="Core Drilling logo" class="logo"></a>
-    <nav class="site-nav">
-      <ul class="nav">
+    <a href="index.html" class="brand">
+      <img src="images/coredriller.svg" alt="Kuberg Core Drilling logo" class="logo" />
+    </a>
+    <nav class="site-nav" aria-label="Main navigation">
+      <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="services.html">Services</a></li>
         <li><a href="projects.html">Projects</a></li>
@@ -18,22 +20,42 @@
       </ul>
     </nav>
   </header>
-  <main>
-    <h2>Request a Quote</h2>
-    <form>
-      <label>Name: <input type="text" name="name"></label><br>
-      <label>Email: <input type="email" name="email"></label><br>
-      <label>Message:<br><textarea name="message"></textarea></label><br>
-      <button type="submit">Send</button>
-    </form>
 
-    <h3>Other Ways to Reach Us</h3>
-    <p>Email: info@precisioncore.com</p>
-    <p>Phone: (423) 635-9052</p>
+  <main>
+    <section class="hero">
+      <h1>Request a Quote</h1>
+      <p>Fill out the form below or reach us directly — we’ll get back within 24 hours.</p>
+    </section>
+
+    <section class="about">
+      <form action="#" method="post">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit">Send</button>
+      </form>
+
+      <h3>Other Ways to Reach Us</h3>
+      <p>Email: <a href="mailto:info@kubergcore.com">info@kubergcore.com</a></p>
+      <p>Phone: (423) 635-9052</p>
+      <p>Address: 1220 Riverside Drive, Chattanooga, TN 37406</p>
+      <p>Mon–Fri: 7 AM – 5 PM</p>
+    </section>
+
+    <section class="callout">
+      <h2>We Drill With Precision</h2>
+      <p>Fully licensed and insured. Safety and accuracy on every site.</p>
+    </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 Kuberg Core Drilling</p>
+    <p>&copy; 2025 Kuberg Core Drilling &nbsp;|&nbsp; Licensed & Insured &nbsp;|&nbsp; Chattanooga, TN</p>
   </footer>
 </body>
 </html>
