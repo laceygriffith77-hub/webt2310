@@ -1,0 +1,79 @@
+:root {
+  --cream-light: #EDE0D4;
+  --cream: #E6CCB2;
+  --caramel: #DDB892;
+  --coffee-light: #B08968;
+  --coffee-dark: #7F5539;
+  --accent-orange: #D17D00;
+}
+
+.bg-cream-light { background-color: var(--cream-light) !important; }
+.bg-cream { background-color: var(--cream) !important; }
+.bg-caramel { background-color: var(--caramel) !important; }
+.bg-coffee-light { background-color: var(--coffee-light) !important; }
+.bg-coffee-dark { background-color: var(--coffee-dark) !important; }
+
+.text-coffee-dark { color: var(--coffee-dark) !important; }
+.text-coffee-light { color: var(--coffee-light) !important; }
+.text-accent { color: var(--accent-orange) !important; }
+
+.btn-accent {
+  background-color: var(--accent-orange);
+  border: none;
+  color: #fff;
+  padding: 10px 24px;
+  border-radius: 999px;
+}
+.btn-accent:hover {
+  background-color: #b36300;
+}
+
+.navbar-toggler {
+  border: none !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.navbar-brand img {
+  position: relative;
+  top: -3px;
+}
+
+/* Normal closed FAQ button */
+.accordion-button {
+  background-color: var(--cream-light) !important;
+  color: var(--coffee-dark) !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* When the FAQ is OPEN (highlight state) */
+.accordion-button:not(.collapsed) {
+  background-color: var(--cream) !important;
+  color: var(--coffee-dark) !important;
+  box-shadow: none !important;
+}
+
+/* Remove blue focus glow */
+.accordion-button:focus {
+  box-shadow: none !important;
+}
+
+/* Body styling */
+.accordion-body {
+  background-color: var(--cream-light) !important;
+  color: var(--coffee-dark) !important;
+}
+
+/* Remove default borders */
+.accordion-item {
+  border: none !important;
+}
+.home-img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+
